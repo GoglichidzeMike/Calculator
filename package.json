@@ -1,4 +1,5 @@
 {
+  "homepage": "https://goglichidzemike.github.io/Calculator",
   "name": "calculatorfcc",
   "version": "0.1.0",
   "private": true,
@@ -15,10 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-
-
   "browserslist": {
     "production": [
       ">0.2%",
@@ -31,8 +32,10 @@
       "last 1 safari version"
     ]
   },
-
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
