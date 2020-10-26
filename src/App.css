@@ -22,7 +22,7 @@
 }
 
 body {
-  background: #c2c2d6;
+  background: #8ecae6;
   -webkit-touch-callout: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -37,6 +37,7 @@ body {
   background: black;
   width: 320px;
   position: relative;
+  border-radius: 10px;
 }
 
 .formulaScreen {
@@ -57,6 +58,7 @@ body {
   color: white;
   text-align: right;
   line-height: 35px;
+  border-radius: 20px;
 }
 
 button {
@@ -66,9 +68,10 @@ button {
   color: white;
   outline: 1px solid black;
   border: none;
-  background: #4d4d4d;
+  background: #219ebc;
   font-family: Share Tech Mono, monospace;
   font-size: 20px;
+  border-radius: 3px;
   cursor: default;
 }
 

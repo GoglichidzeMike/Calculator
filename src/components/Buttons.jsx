@@ -1,9 +1,9 @@
 import React from "react";
 
-const operatorStyle = { background: "#666666" },
-  clearStyle = { background: "#ac3939" },
+const operatorStyle = { background: "#023047" },
+  clearStyle = { background: "#EF476F" },
   equalsStyle = {
-    background: "#004466",
+    background: "#06D6A0",
     position: "absolute",
     height: 130,
     bottom: 5,
