@@ -51,8 +51,11 @@ function App() {
         }
 
         let answer = math.evaluate(expression);
+
         setCurrentVal(answer);
+
         setFormula(expression + "=" + answer);
+
         setEvaluated(true);
       }
     }
@@ -64,11 +67,13 @@ function App() {
       if (value === "-") {
         if (evaluated) {
           setFormula(currentVal + value);
+          setCurrentVal(value);
           setEvaluated(false);
         } else if (formula.endsWith("-")) {
           setFormula(formula);
         } else {
           setFormula(formula + value);
+          setCurrentVal(value);
         }
       }
 
@@ -79,23 +84,28 @@ function App() {
             setEvaluated(false);
           } else {
             setFormula(formula + value.replace("x", "*"));
+            setCurrentVal(value);
           }
           //handle Multiply Button
         } else if ((value === "+" || value === "/") && !formula.endsWith("-")) {
           //handle + & /
           if (evaluated) {
             setFormula(currentVal + value);
+            setCurrentVal(value);
             setEvaluated(false);
           } else {
             setFormula(formula + value);
+            setCurrentVal(value);
           }
         } else if (formula.endsWith("-")) {
           if (evaluated) {
             setFormula(currentVal + value);
+            setCurrentVal(value);
             setEvaluated(false);
           } else {
             let newInput = formula.slice(0, -1);
             setFormula(newInput + value);
+            setCurrentVal(value);
           }
         }
       }
