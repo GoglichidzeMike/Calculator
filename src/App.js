@@ -50,6 +50,10 @@ function App() {
           expression = expression.slice(0, -1);
         }
 
+        if(formula === "-"){
+          return
+        }
+
         let answer = math.evaluate(expression);
 
         setCurrentVal(answer);
@@ -77,7 +81,7 @@ function App() {
         }
       }
 
-      if (!endsWithOperator.test(formula) && value !== "") {
+      if (!endsWithOperator.test(formula) && formula !== "") {
         if (value === "x") {
           if (evaluated) {
             setFormula(currentVal + value.replace("x", "*"));
