@@ -50,8 +50,8 @@ function App() {
           expression = expression.slice(0, -1);
         }
 
-        if(formula === "-"){
-          return
+        if (formula === "-") {
+          return;
         }
 
         let answer = math.evaluate(expression);
@@ -134,6 +134,17 @@ function App() {
           initialize={initialize}
         />
       </div>
+      <p className="footer">
+        dev by -{" "}
+        <a target="blank" href="https://fb.me/mi5ke">
+          Mikael G
+        </a>
+      </p>
+      <p className="footer" id="bot">
+        <a target="blank" href="https://github.com/GoglichidzeMike/Calculator">
+          this project on Git
+        </a>
+      </p>
     </div>
   );
 }

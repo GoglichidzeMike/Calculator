@@ -108,3 +108,21 @@ button:hover {
   color: #00264d;
   line-height: 26px;
 }
+
+.footer {
+  padding-top: 10px;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.445);
+  font-family: "Poppins", sans-serif;
+  opacity: 0.9;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.575);
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.445);
+}
+
+#bot {
+  padding-top: 0px;
+}
