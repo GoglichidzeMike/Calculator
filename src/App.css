@@ -127,3 +127,11 @@ button:hover,
 #bot {
   padding-top: 0px;
 }
+
+#tsparticles {
+  max-height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}

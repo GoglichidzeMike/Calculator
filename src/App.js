@@ -4,6 +4,7 @@ import "./App.css";
 import Buttons from "./components/Buttons";
 import Screen from "./components/Screen";
 import Formula from "./components/Formula";
+import Particles from "react-particles-js";
 
 const endsWithOperator = /[*+-/]$/;
 
@@ -123,29 +124,57 @@ function App() {
   };
 
   return (
-    <div className="App" id="app">
-      <div id="calculator" className="calculator">
-        <Formula formula={formula} />
-        <Screen currentVal={currentVal} />
-        <Buttons
-          addToInput={addToInput}
-          operators={handleOperators}
-          evaluate={handleEvaluate}
-          initialize={initialize}
+    <>
+      <div className="App" id="app">
+        <Particles
+          params={{
+            particles: {
+              number: {
+                value: 100,
+              },
+              size: {
+                value: 3,
+              },
+              move: {
+                speed: 1,
+              },
+            },
+            interactivity: {
+              events: {
+                onhover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+              },
+            },
+          }}
         />
+        <div id="calculator" className="calculator">
+          <Formula formula={formula} />
+          <Screen currentVal={currentVal} />
+          <Buttons
+            addToInput={addToInput}
+            operators={handleOperators}
+            evaluate={handleEvaluate}
+            initialize={initialize}
+          />
+        </div>
+        <p className="footer">
+          dev by -{" "}
+          <a target="blank" href="https://fb.me/mi5ke">
+            Mikael G
+          </a>
+        </p>
+        <p className="footer" id="bot">
+          <a
+            target="blank"
+            href="https://github.com/GoglichidzeMike/Calculator"
+          >
+            this project on Git
+          </a>
+        </p>
       </div>
-      <p className="footer">
-        dev by -{" "}
-        <a target="blank" href="https://fb.me/mi5ke">
-          Mikael G
-        </a>
-      </p>
-      <p className="footer" id="bot">
-        <a target="blank" href="https://github.com/GoglichidzeMike/Calculator">
-          this project on Git
-        </a>
-      </p>
-    </div>
+    </>
   );
 }
 
